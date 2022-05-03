@@ -188,13 +188,13 @@ def display_data(df):
         next5='yes'
         start_row=0
         end_row=5
-        while next5=='yes':
+        while next5.lower()=='yes':
             sample=df[:][start_row:end_row]
             print(sample)
             start_row+=5
             end_row+=5
             print('\nDo you want to see the next 5 rows?')
-            next5=str(input('\nEnter "yes" or "no":   ')).lower()
+            next5=str(input('\nEnter "yes" or "no":   '))
 
 
 def main():
