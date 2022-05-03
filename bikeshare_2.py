@@ -40,7 +40,7 @@ def get_filters():
     """
     print('Hello! Let\'s explore some US bikeshare data!')
     # get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid inputs
-    city=str(input('Please enter the name of the city to analyze ("chicago","new york city","washington"):  ')).lower()
+    city=str(input('Please enter the name of the city to filter by ("chicago","new york city","washington"):  ')).lower()
 
     while city not in CITY_DATA:
         city=str(input('\nInvalid input, please enter a valid city name:  ')).lower()
@@ -179,7 +179,7 @@ def user_stats(df,city):
         print('\nThe earliest year of birth:',min_yob,'\nThe most recent year of birht:',max_yob,'\nThe most common year of birth:',mode_yob)
 
     print("\nThis took %s seconds." % (time.time() - start_time))
-    
+
 
 def display_data(df):
     display_data=str(input('\nDo you want to see the first 5 rows of data? enter yes or no.  ')).lower()
